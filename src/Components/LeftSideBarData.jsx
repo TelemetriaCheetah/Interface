@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, StylesProvider, Typography , IconButton} from '@material-ui/core'
 import { Switch , Route , Link } from "react-router-dom";
-import { DesktopMac , DesktopMacTwoTone , Router , RouterTwoTone , DiscFullOutlined , DiscFullTwoTone, DiscFull, MapOutlined , MapTwoTone , BatteryCharging90 ,  BatteryCharging90TwoTone} from "@material-ui/icons"
+import { DesktopMac , DesktopMacTwoTone , Router , RouterTwoTone , DiscFullOutlined , DiscFullTwoTone, DiscFull, MapOutlined , MapTwoTone , BatteryCharging90 ,  BatteryCharging90TwoTone , DirectionsRunOutlined , DirectionsRunTwoTone} from "@material-ui/icons"
 
 const styles = 
 {
@@ -40,5 +40,10 @@ export const LeftSideBarData =
         icon: <IconButton><BatteryCharging90 style={styles.icon} /></IconButton>,
         iconAlt: <IconButton>< BatteryCharging90TwoTone style={styles.icon} /></IconButton>,
         link: "/rt-pwt",
+    },
+    {
+        icon: <IconButton><DirectionsRunOutlined style={styles.icon} /></IconButton>,
+        iconAlt: <IconButton>< DirectionsRunTwoTone style={styles.icon} /></IconButton>,
+        link: "/rt-test",
     },
 ]

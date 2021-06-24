@@ -25,7 +25,7 @@ const theme = createMuiTheme({
         },
         secondary: {
             light: '#000000',
-            main: 'rgba(10, 10, 10, 0.75)',
+            main: 'rgba(0, 0, 0, 0.45)',
             dark: '#ba000d',
             contrastText: '#000',
         },
@@ -54,7 +54,7 @@ const theme = createMuiTheme({
               "@global": {
                 body: {
                   backgroundImage:
-                    "url(src/images/skyline.jpg)"
+                    "url(src/images/skyline.png)"
                 }
               }
             }

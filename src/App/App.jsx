@@ -14,6 +14,7 @@ import { LeftSideBar } from '../Components/LeftSideBar';
 import { RightSideBar } from '../Components/RightSideBar';
 
 import socketIOClient from "socket.io-client";
+import { TestControl } from '../Pages/TestControl';
 const ENDPOINT = "http://127.0.0.1:2000";
 
 
@@ -106,6 +107,14 @@ export const App = () => {
                             </Grid>
                             <Grid item xs={1}></Grid>
                         </Route>
+                        <Route exact path="/rt-test">
+                            <Header titulo="Controle de Teste"></Header>
+                            <Grid item xs={1}></Grid>
+                            <Grid item xs={10}>
+                                <TestControl data={sensorIncomingData}/>
+                            </Grid>
+                            <Grid item xs={1}></Grid>
+                        </Route>
                     </Switch>
             </Grid>
             <Switch>
@@ -122,6 +131,9 @@ export const App = () => {
                     <LeftSideBar></LeftSideBar>
                 </Route>
                 <Route exact path="/rt-pwt">
+                    <LeftSideBar></LeftSideBar>
+                </Route>
+                <Route exact path="/rt-test">
                     <LeftSideBar></LeftSideBar>
                 </Route>
             </Switch>
