@@ -137,7 +137,7 @@ export const App = () => {
                     <LeftSideBar></LeftSideBar>
                 </Route>
             </Switch>
-            <Footer></Footer>
+            <Footer data={sensorIncomingData}></Footer>
             <RightSideBar></RightSideBar>
         </div>
     )

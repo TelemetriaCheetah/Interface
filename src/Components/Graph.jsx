@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => (
 }));
 
 let vetor = [0,1];
+let vetor2 = [0,1];
 
 export const Graph = (props) =>
 {
@@ -50,19 +51,38 @@ export const Graph = (props) =>
         vetor.push(props.temp);
     }
 
+    if(vetor2.length <= 30)
+    {
+        vetor2.push(props.temp2);
+    }
+    else
+    {
+        vetor2.shift();
+        vetor2.push(props.temp2);
+    }
+
     const data = (canvas) => {
         const ctx = canvas.getContext('2d')
         var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);gradientStroke.addColorStop(0, "rgba(252,41,96,1)");gradientStroke.addColorStop(1, "rgba(255,84,44,1)");
 
         return {
             labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
-            datasets: [{
-            label: props.titulo,
-            fill: 'true',
-            backgroundColor: gradientStroke,
-            borderColor: "#fff",
-            data: vetor,
-            }]
+            datasets: [
+            {
+                label: props.titulo,
+                fill: 'true',
+                backgroundColor: "blue",
+                borderColor: "#fff",
+                data: vetor2,
+            },
+            {
+                label: props.titulo2,
+                fill: 'true',
+                backgroundColor: "red",
+                borderColor: "#fff",
+                data: vetor,
+            },
+            ]
         }
       };
       
@@ -75,6 +95,7 @@ export const Graph = (props) =>
           y: 
             {
             suggestedMax: 1000,
+            suggestedMin: 0,
             ticks: 
             {
                 fontSize: 16, 

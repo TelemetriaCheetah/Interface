@@ -44,11 +44,11 @@ export const IMU = (props) =>
             <div className={classes.div}>
             
                 <div><img src={Accel} className={classes.img}/></div>
-                <Typography> <b> AccelX: </b> {props.accel} m/s²</Typography>
-                <Typography> <b> AccelY: </b> 0,0 m/s² </Typography>
+                <Typography> <b> AccelX: </b> {props.accelX} m/s²</Typography>
+                <Typography> <b> AccelY: </b> {props.accelY} m/s² </Typography>
 
             </div>
-            <div className={classes.dot} style={{top : -166 + props.accel*2}}></div>
+            <div className={classes.dot} style={{top : -166 + props.accelX*5 , left: 0 + props.accelY*3}}></div>
             
         </>
     )

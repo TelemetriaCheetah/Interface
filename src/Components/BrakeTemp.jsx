@@ -42,7 +42,7 @@ function tempToColor(temp)
     const oldRange = 
     {
         min: 0,
-        max: 250,
+        max: 980,
     };
 
     const newRange = 
@@ -69,7 +69,7 @@ export const BrakeTemp = (props) =>
             </div>
             <Typography> <b> Temp. Centro:  </b> {props.temp} ºC</Typography>
             <Typography> <b> Temp. Borda:  </b> {props.temp2} ºC</Typography>
-            <Typography> <b> Rotação:  </b> {props.rotacao/10} RPM</Typography>
+            <Typography> <b> Rotação:  </b> {props.rotacao} RPM</Typography>
             </>
     )
 }

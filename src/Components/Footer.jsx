@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState , useRef , useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles'
 import logoUnifei from '../images/unifei.png';
 import logoCheetah from '../images/logo.png';
@@ -35,8 +35,15 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const Footer = () => {
+export const Footer = (props) => {
     const classes = useStyles();
+    const [sensorIncomingData , setSensorIncomingData] = React.useState(props.data);
+
+    useEffect(() => 
+    {
+        setSensorIncomingData(props.data);
+    }, [props.data]);
+
     return (
         <div>
             <div className = {classes.innerGrid}>
@@ -45,7 +52,7 @@ export const Footer = () => {
                     <Grid item xs={3}><b>ID Teste:</b> 23</Grid>
                     <Grid item xs={3}><b>Usuário:</b> Caio Tácito</Grid>
                     <Grid item xs={3}><b>TS:</b> 2021-04-27-23-37-42</Grid>
-                    <Grid item xs={3}><b>Volta atual:</b> 5:25:32 </Grid>
+                    <Grid item xs={3}><b>Volta atual:</b> {sensorIncomingData.SA80} </Grid>
                     <Grid item xs={3}><b>Última volta:</b> 7:23:95 </Grid>
                     <Grid item xs={3}><b>Diferença:</b> 4:24:22</Grid>
                     <Grid item xs={3}><b>Volta mais rápida:</b> 7:23:95</Grid>
