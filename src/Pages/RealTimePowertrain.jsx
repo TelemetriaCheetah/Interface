@@ -60,12 +60,12 @@ export const RealTimePowertrain  = (props) => {
           {
               text: "TPS 2",
               value: sensorIncomingData.SA76 + " PSI",
-              percent: percentify(sensorIncomingData.SA76/10),
+              percent: percentify(sensorIncomingData.SA2),
           },
           {
               text: "Pressão do Freio",
               value: sensorIncomingData.SA74+ " PSI",
-              percent: percentify(sensorIncomingData.SA74/10),
+              percent: percentify(sensorIncomingData.SA76/10),
           },
           {
               text: "RPM",
@@ -88,27 +88,27 @@ export const RealTimePowertrain  = (props) => {
       [
           {
               text: "Tensão de saída BMS",
-              value: sensorIncomingData.SA1 + "V",
+              value: sensorIncomingData.SA32 + "V",
           },
           {
               text: "Frequência",
-              value: sensorIncomingData.SA1 + "Hz",
+              value: sensorIncomingData.SA58 + "Hz",
           },
           {
               text: "Estado",
-              value: sensorIncomingData.SA1 + "",
+              value: sensorIncomingData.SA59 + "",
           },
           {
               text: "Alarme",
-              value: sensorIncomingData.SA1 + "",
+              value: sensorIncomingData.SA67 + "",
           },
           {
               text: "Falha atual:",
-              value: sensorIncomingData.SA1 + "",
+              value: sensorIncomingData.SA68 + "",
           },
           {
               text: "Falha anterior:",
-              value: sensorIncomingData.SA1 + "",
+              value: sensorIncomingData.SA69 + "",
           },
       ]
 
@@ -116,31 +116,31 @@ export const RealTimePowertrain  = (props) => {
       [
           {
               text: "12V BMS",
-              value: sensorIncomingData.SA1 + "V",
+              value: sensorIncomingData.SA52 + "V",
           },
           {
               text: "Fan Speed",
-              value: sensorIncomingData.SA1 + "RPM",
+              value: sensorIncomingData.SA51 + "RPM",
           },
           {
               text: "Tensão máxima",
-              value: sensorIncomingData.SA1 + "V",
+              value: sensorIncomingData.SA42 + "V",
           },
           {
               text: "Tensão mínima",
-              value: sensorIncomingData.SA1 + "V",
+              value: sensorIncomingData.SA43 + "V",
           },
           {
               text: "Maior resistência",
-              value: sensorIncomingData.SA1 + "Ω",
+              value: sensorIncomingData.SA45 + "Ω",
           },
           {
               text: "Menor resistência",
-              value: sensorIncomingData.SA1 + "Ω",
+              value: sensorIncomingData.SA46 + "Ω",
           },
           {
               text: "Isolação",
-              value: sensorIncomingData.SA1 + "",
+              value: sensorIncomingData.SA53 + "",
           },
       ]
 
@@ -151,7 +151,7 @@ export const RealTimePowertrain  = (props) => {
             <Grid item xs={3} ><SimpleText titulo={""} values={textoBMS} ></SimpleText></Grid>
             <Grid item xs={3} ><Battery titulo={"Bateria LV"} values={sensorValues} ></Battery></Grid>
             <Grid item xs={3} ><Temperature titulo={"Temperaturas"} values={sensorValues} ></Temperature></Grid>
-            <Grid item xs={6} ><Graph titulo={"Gráfico"} height={"330px"} temp={sensorIncomingData.SA76}></Graph></Grid>
+            <Grid item xs={6} ><Graph titulo={"Gráfico"} height={"330px"} temp={sensorIncomingData.SA1} temp2={sensorIncomingData.SA76}></Graph></Grid>
             <Grid item xs={3} ><SliderBar5 titulo={""} values={sensorValues} ></SliderBar5></Grid>
         </Grid>
     )

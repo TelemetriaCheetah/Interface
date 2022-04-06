@@ -18,8 +18,8 @@ const styles = {
     },
 }
 
-var signalRSSI = -74;
-var signalRTT = 128;
+var signalRSSI = 0;
+var signalRTT = 0;
 
 export const RightSideBarData = 
 [
@@ -31,7 +31,7 @@ export const RightSideBarData =
 
     {
         icon: <Schedule style={styles.icon} />,
-        text: <div><b>Uptime: </b> <br /> 179s</div>,
+        text: <div><b>Uptime: </b> <br /> 0s</div>,
     },
 
     {
